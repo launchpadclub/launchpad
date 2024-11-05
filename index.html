@@ -73,6 +73,17 @@
       margin-top: 40px;
     }
 
+    .highlight-apechain {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -93,6 +104,7 @@
     <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" alt="Image 6">
     <img src="https://i.postimg.cc/htyrS34K/image.jpg" alt="Image 7">
     <img src="https://i.postimg.cc/sxz6B6B1/image.jpg" alt="Image 8">
+    <img src="https://i.postimg.cc/cJx0yh17/image.jpg"Image 9">
   </div>
 
   <!-- Platforms and Protocols Section -->
@@ -104,7 +116,7 @@
         <div class="platform-card">
           <h5 class="card-title">Magic Eden</h5>
           <p>Unlock premium NFT collections on Magic Eden's marketplace.</p>
-          <button class="btn btn-custom" onclick="window.open('https://magiceden.io', '_blank')">Explore Magic Eden</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://magiceden.io')">Explore Magic Eden</button>
         </div>
       </div>
 
@@ -113,7 +125,7 @@
         <div class="platform-card">
           <h5 class="card-title">OpenSea</h5>
           <p>Access the world's leading NFT trading platform on OpenSea.</p>
-          <button class="btn btn-custom" onclick="window.open('https://opensea.io', '_blank')">Explore OpenSea</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://opensea.io')">Explore OpenSea</button>
         </div>
       </div>
 
@@ -122,7 +134,7 @@
         <div class="platform-card">
           <h5 class="card-title">CoinMarketCap</h5>
           <p>Stay updated with real-time cryptocurrency market data.</p>
-          <button class="btn btn-custom" onclick="window.open('https://coinmarketcap.com', '_blank')">Visit CoinMarketCap</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://coinmarketcap.com')">Visit CoinMarketCap</button>
         </div>
       </div>
 
@@ -131,17 +143,18 @@
         <div class="platform-card">
           <h5 class="card-title">Solana Protocol</h5>
           <p>Power your projects with Solana's scalable blockchain solutions.</p>
-          <button class="btn btn-custom" onclick="window.open('https://solana.com/nft', '_blank')">NFT Creation</button>
-          <button class="btn btn-custom" onclick="window.open('https://solana.com/memecoins', '_blank')">Meme Coins</button>
-          <button class="btn btn-custom" onclick="window.open('https://solana.com/domains', '_blank')">Domain Creation</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana.com/nft')">NFT Creation</button>
+<button class="btn btn-custom" onclick="openInIframe('https://solana.com/memecoins')">Meme Coins</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana.com/domains')">Domain Creation</button>
         </div>
       </div>
-   <!-- Bitcoin Protocol -->
+
+      <!-- Bitcoin Protocol -->
       <div class="col">
         <div class="platform-card">
           <h5 class="card-title">Bitcoin Protocol</h5>
           <p>Engage with secure Bitcoin trading and blockchain services.</p>
-          <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Start Bitcoin Trading</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin.org')">Start Bitcoin Trading</button>
         </div>
       </div>
 
@@ -150,7 +163,7 @@
         <div class="platform-card">
           <h5 class="card-title">Ton Protocol</h5>
           <p>Leverage TON blockchain for decentralized services.</p>
-          <button class="btn btn-custom" onclick="window.open('https://ton.org', '_blank')">Access TON Wallet</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://ton.org')">Access TON Wallet</button>
         </div>
       </div>
 
@@ -159,7 +172,7 @@
         <div class="platform-card">
           <h5 class="card-title">Fractal</h5>
           <p>Discover emerging NFTs and digital assets on Fractal.</p>
-          <button class="btn btn-custom" onclick="window.open('https://fractal.is', '_blank')">Explore Fractal</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://fractal.is')">Explore Fractal</button>
         </div>
       </div>
 
@@ -168,7 +181,18 @@
         <div class="platform-card">
           <h5 class="card-title">OpCAT</h5>
           <p>Access exclusive NFTs on OpCAT's dedicated platform.</p>
-          <button class="btn btn-custom" onclick="window.open('https://opcat.io', '_blank')">Explore OpCAT</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://opcat.io')">Explore OpCAT</button>
+        </div>
+      </div>
+
+      <!-- Highlight: Apechain Protocol -->
+      <div class="col">
+        <div class="platform-card">
+          <h5 class="card-title highlight-apechain">Apechain Protocol</h5>
+          <p>Innovate with Apechain's resources for NFT launches, DeFi applications, and secure bridges.</p>
+          <button class="btn btn-custom" onclick="openInIframe('https://apechain.io/nft')">Apechain NFT Creation</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://apechain.io/defi')">Apechain DeFi Apps</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://apechain.io/bridge')">Apechain Bridge</button>
         </div>
       </div>
 
@@ -191,9 +215,19 @@
     </ul>
   </div>
 
+  <!-- Iframe Section for Opening Links -->
+  <iframe id="contentFrame"></iframe>
+
   <!-- Bootstrap JS & Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    function openInIframe(url) {
+      document.getElementById('contentFrame').src = url;
+    }
+  </script>
 
 </body>
 </html>
