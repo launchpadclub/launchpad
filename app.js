@@ -1,5 +1,11 @@
 const spaceship = document.getElementById('spaceship');
 
+document.addEventListener('mousemove', (event) => {
+    spaceship.style.left = ${event.pageX - 25}px;
+    spaceship.style.top = ${event.pageY - 25}px;
+});
+const spaceship = document.getElementById('spaceship');
+
 // تحريك السفينة بناءً على حركة الماوس
 document.addEventListener('mousemove', (event) => {
     anime({
