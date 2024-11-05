@@ -323,3 +323,13 @@ async function buyTokens() {
 
 document.getElementById("mintNFT").onclick = mintNFT;
 document.getElementById("buyTokens").onclick = buyTokens;
+
+document.addEventListener('mousemove', (event) => {
+    anime({
+        targets: spaceship,
+        translateX: event.pageX - 25,
+        translateY: event.pageY - 25,
+        easing: 'easeOutExpo',
+        duration: 300
+    });
+});
