@@ -12,123 +12,150 @@
     body {
       background-color: #0b0f19;
       color: white;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
+      font-family: 'Arial', sans-serif;
     }
 
-    /* Header Section */
-    .header {
-      position: relative;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .launch-soon {
-      font-size: 1.2rem;
-      color: #ffcc00;
-      text-align: center;
-      margin-top: -20px;
-    }
-
-    /* Marquee for moving images */
-    .marquee {
-      width: 100%;
-      overflow: hidden;
-      background-color: #1b1f2a;
-      padding: 10px 0;
-      margin-bottom: 30px;
-    }
-
-    .marquee img {
-      height: 50px;
-      margin: 0 20px;
-      animation: scroll 15s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* Card styles */
     .platform-card {
-      background-color: #1b1f2a;
+      background: #1b1f2a;
       border: none;
       border-radius: 15px;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .platform-card:hover {
       transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
     }
 
     .platform-card img {
-      width: 80px;
-      margin-bottom: 15px;
+      border-radius: 15px 15px 0 0;
     }
 
     .btn-custom {
       background-color: #00ffff;
       color: black;
-      border-radius: 20px;
-      padding: 10px 20px;
+      border-radius: 25px;
       transition: background 0.3s;
     }
 
     .btn-custom:hover {
       background-color: #00cccc;
     }
+
+    .nft-grid {
+      margin-top: 40px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-size: 2rem;
+    }
+
+    .moving-images {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #0b0f19;
+      padding: 10px 0;
+    }
+
+    .moving-images img {
+      display: inline-block;
+      height: 50px;
+      margin-right: 20px;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header Section -->
-  <div class="header">Launchpad Platform</div>
-  <div class="launch-soon"> </div>
-
-  <!-- Moving Images Section -->
-  <div class="marquee d-flex align-items-center justify-content-start">
-    <img src="https://postimg.cc/mh2F0r7c" alt="Logo 1">
-    <img src="https://postimg.cc/4HJnGWKk" alt="Logo 2">
-    <img src="https://postimg.cc/MMJvP6qG" alt="Logo 3">
-    <img src="https://postimg.cc/6Tw8CpMj" alt="Logo 4">
+  <div class="container header">
+    <h1>Launchpad Platform</h1>
+    <a href="https://twitter.com/Laaunchpad" target="_blank" class="btn btn-light">@Laaunchpad</a>
   </div>
 
-  <!-- Platforms Section -->
-  <div class="container">
-    <div class="row gy-4">
+  <!-- Moving Images Section -->
+  <div class="moving-images text-center">
+    <img src="https://i.postimg.cc/7LNqG7cP/410651fc-7f8b-40ec-a245-95da430c340f.webp" alt="Image 1">
+    <img src="https://i.postimg.cc/jdWqgDWv/2abe6a9c-18b2-4060-9504-a3149b9a7a9b.webp" alt="Image 2">
+    <img src="https://i.postimg.cc/3NNrHRt8/8a9f9279-52af-4eeb-918f-28712ec3f542.webp" alt="Image 3">
+    <img src="https://i.postimg.cc/dVy11hwD/b3965066-3864-4bad-be45-ebd0f881d8a7.webp" alt="Image 4">
+    <img src="https://i.postimg.cc/8kZsn8Zk/image.jpg" alt="Image 5">
+    <img src="https://i.postimg.cc/6pk8LdYd/image.jpg" alt="Image 6">
+    <img src="https://i.postimg.cc/6qM7dgm3/image.jpg" alt="Image 7">
+    <img src="https://i.postimg.cc/L6yffYcT/image.jpg" alt="Image 8">
+    <img src="https://i.postimg.cc/htyrS34K/image.jpg" alt="Image 9">
+    <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" alt="Image 10">
+  </div>
 
+  <!-- NFT Grid Section -->
+  <div class="container nft-grid">
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
       <!-- Magic Eden Card -->
-      <div class="col-md-4">
+      <div class="col">
         <div class="platform-card">
-          <img src="https://postimg.cc/xJmL8pTX" alt="Magic Eden Logo">
-          <h5>Magic Eden</h5>
-          <p>Explore the Magic Eden marketplace.</p>
-          <button class="btn btn-custom" onclick="openPlatform('https://magiceden.io')">Use Magic Eden</button>
+          <img src="https://i.postimg.cc/6pk8LdYd/image.jpg" class="card-img-top" alt="Magic Eden Logo">
+          <div class="card-body">
+            <h5 class="card-title">Magic Eden</h5>
+            <p class="card-text">Explore the Magic Eden marketplace.</p>
+            <button class="btn btn-custom" onclick="window.open('https://magiceden.io', '_blank')">Use Magic Eden</button>
+          </div>
         </div>
       </div>
 
       <!-- OpenSea Card -->
-      <div class="col-md-4">
+      <div class="col">
         <div class="platform-card">
-          <img src="https://postimg.cc/fShm97JB" alt="OpenSea Logo">
-          <h5>OpenSea</h5>
-          <p>Discover NFTs on OpenSea.</p>
-          <button class="btn btn-custom" onclick="openPlatform('https://opensea.io')">Use OpenSea</button>
+          <img src="https://i.postimg.cc/htyrS34K/image.jpg" class="card-img-top" alt="OpenSea Logo">
+          <div class="card-body">
+            <h5 class="card-title">OpenSea</h5>
+            <p class="card-text">Discover NFTs on OpenSea.</p>
+            <button class="btn btn-custom" onclick="window.open('https://opensea.io', '_blank')">Use OpenSea</button>
+          </div>
         </div>
       </div>
 
       <!-- CoinMarketCap Card -->
-      <div class="col-md-4">
+      <div class="col">
         <div class="platform-card">
-          <img src="https://postimg.cc/0rWJxqCV" alt="CoinMarketCap Logo">
-          <h5>CoinMarketCap</h5>
-          <p>Check the latest cryptocurrency prices.</p>
-          <button class="btn btn-custom" onclick="openPlatform('https://coinmarketcap.com')">Use CoinMarketCap</button>
+          <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" class="card-img-top" alt="CoinMarketCap Logo">
+          <div class="card-body">
+            <h5 class="card-title">CoinMarketCap</h5>
+            <p class="card-text">Check the latest cryptocurrency prices.</p>
+            <button class="btn btn-custom" onclick="window.open('https://coinmarketcap.com', '_blank')">Use CoinMarketCap</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fractal Card -->
+      <div class="col">
+<div class="platform-card">
+          <img src="https://i.postimg.cc/L6yffYcT/image.jpg" class="card-img-top" alt="Fractal Logo">
+          <div class="card-body">
+            <h5 class="card-title">Fractal</h5>
+            <p class="card-text">Explore the Fractal NFT marketplace.</p>
+            <button class="btn btn-custom" onclick="window.open('https://fractal.is', '_blank')">Use Fractal</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OpenCAT Card -->
+      <div class="col">
+        <div class="platform-card">
+          <img src="https://i.postimg.cc/6qM7dgm3/image.jpg" class="card-img-top" alt="OpenCAT Logo">
+          <div class="card-body">
+            <h5 class="card-title">OpenCAT</h5>
+            <p class="card-text">Discover new NFTs on OpenCAT.</p>
+            <button class="btn btn-custom" onclick="window.open('https://opencat.io', '_blank')">Use OpenCAT</button>
+          </div>
         </div>
       </div>
 
@@ -138,14 +165,6 @@
   <!-- Bootstrap JS & Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-
-  <script>
-    // Open platform function to open a platform within an iframe or new page
-    function openPlatform(url) {
-      // Here you can customize how the platform opens, like using a modal or iframe
-      window.open(url, '_blank');
-    }
-  </script>
 
 </body>
 </html>
