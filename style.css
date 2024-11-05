@@ -1,31 +1,48 @@
+/* إعدادات الصفحة */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    color: #c5c6c7;
 }
 
-#connectWallet, #mintNFT, #buyTokens {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin: 10px;
+.spaceship {
+    width: 60px;
+    height: 60px;
+    background-image: url('spaceship.png'); /*<a href='https://postimg.cc/CdGN79hJ' target='_blank'><img src='https://i.postimg.cc/FFqBrQ2t/IMG-Launchpad.jpg' border='0' alt='IMG-Launchpad'/></a> */
+    background-size: cover;
+    position: absolute;
+    transition: transform 0.1s ease;
+    pointer-events: none;
 }
 
-.nft-carousel {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #66fcf1;
+    text-align: center;
 }
 
-.moving-image {
-  width: 100px;
-  height: 100px;
-  animation: moveHorizontally 5s linear infinite;
+.section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-@keyframes moveHorizontally {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+.section p {
+    font-size: 1.2rem;
+    width: 60%;
+}
+
+.instructions {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #45a29e;
+    font-size: 1rem;
 }
