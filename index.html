@@ -27,23 +27,16 @@
       box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
     }
 
-    .platform-card img {
-      border-radius: 15px 15px 0 0;
-    }
-
     .btn-custom {
       background-color: #00ffff;
       color: black;
       border-radius: 25px;
+      margin: 5px;
       transition: background 0.3s;
     }
 
     .btn-custom:hover {
       background-color: #00cccc;
-    }
-
-    .nft-grid {
-      margin-top: 40px;
     }
 
     .header {
@@ -72,6 +65,14 @@
       from { transform: translateX(100%); }
       to { transform: translateX(-100%); }
     }
+
+    .roadmap, .objectives {
+      background-color: #1b1f2a;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
   </style>
 </head>
 <body>
@@ -96,70 +97,100 @@
     <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" alt="Image 10">
   </div>
 
-  <!-- NFT Grid Section -->
-  <div class="container nft-grid">
+  <!-- Platforms and Protocols Section -->
+  <div class="container my-5">
     <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-      <!-- Magic Eden Card -->
+
+      <!-- Magic Eden -->
       <div class="col">
         <div class="platform-card">
-          <img src="https://i.postimg.cc/gk0CCrF0/image.jpg" class="card-img-top" alt="Magic Eden Logo">
-          <div class="card-body">
-            <h5 class="card-title">Magic Eden</h5>
-            <p class="card-text">Explore the Magic Eden marketplace.</p>
-            <button class="btn btn-custom" onclick="window.open('https://magiceden.io', '_blank')">Use Magic Eden</button>
-          </div>
+          <h5 class="card-title">Magic Eden</h5>
+          <p>Explore the Magic Eden marketplace.</p>
+          <button class="btn btn-custom" onclick="window.open('https://magiceden.io', '_blank')">Use Magic Eden</button>
         </div>
       </div>
 
-      <!-- OpenSea Card -->
+      <!-- OpenSea -->
       <div class="col">
         <div class="platform-card">
-          <img src="https://i.postimg.cc/htyrS34K/image.jpg" class="card-img-top" alt="OpenSea Logo">
-          <div class="card-body">
-            <h5 class="card-title">OpenSea</h5>
-            <p class="card-text">Discover NFTs on OpenSea.</p>
-            <button class="btn btn-custom" onclick="window.open('https://opensea.io', '_blank')">Use OpenSea</button>
-          </div>
+          <h5 class="card-title">OpenSea</h5>
+          <p>Discover NFTs on OpenSea.</p>
+          <button class="btn btn-custom" onclick="window.open('https://opensea.io', '_blank')">Use OpenSea</button>
         </div>
       </div>
 
-      <!-- CoinMarketCap Card -->
+      <!-- CoinMarketCap -->
       <div class="col">
         <div class="platform-card">
-          <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" class="card-img-top" alt="CoinMarketCap Logo">
-          <div class="card-body">
-            <h5 class="card-title">CoinMarketCap</h5>
-            <p class="card-text">Check the latest cryptocurrency prices.</p>
-            <button class="btn btn-custom" onclick="window.open('https://coinmarketcap.com', '_blank')">Use CoinMarketCap</button>
-          </div>
+          <h5 class="card-title">CoinMarketCap</h5>
+          <p>Check cryptocurrency prices.</p>
+          <button class="btn btn-custom" onclick="window.open('https://coinmarketcap.com', '_blank')">Use CoinMarketCap</button>
         </div>
       </div>
 
-      <!-- Fractal Card -->
+      <!-- Solana Protocol -->
       <div class="col">
-<div class="platform-card">
-          <img src="https://i.postimg.cc/L6yffYcT/image.jpg" class="card-img-top" alt="Fractal Logo">
-          <div class="card-body">
-            <h5 class="card-title">Fractal</h5>
-            <p class="card-text">Explore the Fractal NFT marketplace.</p>
-            <button class="btn btn-custom" onclick="window.open('https://fractal.is', '_blank')">Use Fractal</button>
-          </div>
+        <div class="platform-card">
+          <h5 class="card-title">Solana Protocol</h5>
+          <p>Solana blockchain services.</p>
+          <button class="btn btn-custom" onclick="window.open('https://solana.com/nft', '_blank')">NFT Creation</button>
+          <button class="btn btn-custom" onclick="window.open('https://solana.com/memecoins', '_blank')">Meme Coins</button>
+          <button class="btn btn-custom" onclick="window.open('https://solana.com/domains', '_blank')">Domain Creation</button>
+        </div>
+      </div>
+<!-- Bitcoin Protocol -->
+      <div class="col">
+        <div class="platform-card">
+          <h5 class="card-title">Bitcoin Protocol</h5>
+          <p>Bitcoin blockchain services.</p>
+          <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Bitcoin Trading</button>
         </div>
       </div>
 
-      <!-- OpenCAT Card -->
+      <!-- Ton Protocol -->
       <div class="col">
         <div class="platform-card">
-          <img src="https://i.postimg.cc/6qM7dgm3/image.jpg" class="card-img-top" alt="OpenCAT Logo">
-          <div class="card-body">
-            <h5 class="card-title">OpenCAT</h5>
-            <p class="card-text">Discover new NFTs on OpenCAT.</p>
-            <button class="btn btn-custom" onclick="window.open('https://opencat.io', '_blank')">Use OpenCAT</button>
-          </div>
+          <h5 class="card-title">Ton Protocol</h5>
+          <p>TON blockchain services.</p>
+          <button class="btn btn-custom" onclick="window.open('https://ton.org', '_blank')">TON Wallet</button>
+        </div>
+      </div>
+
+      <!-- Fractal Platform -->
+      <div class="col">
+        <div class="platform-card">
+          <h5 class="card-title">Fractal</h5>
+          <p>Explore Fractal marketplace.</p>
+          <button class="btn btn-custom" onclick="window.open('https://fractal.is', '_blank')">Use Fractal</button>
+        </div>
+      </div>
+
+      <!-- OpCAT Platform -->
+      <div class="col">
+        <div class="platform-card">
+          <h5 class="card-title">OpCAT</h5>
+          <p>Discover NFTs on OpCAT.</p>
+          <button class="btn btn-custom" onclick="window.open('https://opcat.io', '_blank')">Use OpCAT</button>
         </div>
       </div>
 
     </div>
+  </div>
+
+  <!-- Objectives Section -->
+  <div class="container objectives text-center">
+    <h3>Objectives</h3>
+    <p>Our platform aims to streamline blockchain-based applications, including NFTs, meme coins, and digital domains, to make them accessible for everyone.</p>
+  </div>
+
+  <!-- Roadmap Section -->
+  <div class="container roadmap">
+    <h3>Roadmap</h3>
+    <ul>
+      <li><strong>Q4 This Year:</strong> Beta launch on test networks, metaverse game integration with property minting and purchasing.</li>
+      <li><strong>Q1 Next Year:</strong> Launch of stock and exchange trading platform, deployment of private blockchain network.</li>
+      <li>Expansion of services based on community feedback and integration of more protocols.</li>
+    </ul>
   </div>
 
   <!-- Bootstrap JS & Popper.js -->
