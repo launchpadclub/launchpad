@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launchpad Platform</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launchpad Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Launchpad Platform</h1>
-    <button id="connectWallet">Connect Wallet</button>
-    <div id="nftContent"></div>
-    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
-    <script src="app.js"></script>
+  <h1>Welcome to the Launchpad Platform</h1>
+  <button id="connectWallet">Connect Wallet</button>
+  <div id="nftSection">
+    <h2>Top NFTs</h2>
+    <div class="nft-carousel">
+      <!--  <img src="images/nft1.png" alt="NFT 1">
+    <img src="images/nft2.png" alt="NFT 2">
+    <img src="images/nft3.png" alt="NFT 3"> -->
+      <img src="monkey.png" class="moving-image" alt="NFT Image">
+    </div>
+  </div>
+  <button id="mintNFT">Mint NFT</button>
+  <button id="buyTokens">Buy Tokens</button>
+
+  <script src="web3.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
