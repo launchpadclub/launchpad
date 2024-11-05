@@ -1,19 +1,5 @@
-let web3;
-let contract;
-
-//async function connectWallet() {
-    if (typeof window.ethereum !== 'undefined') {
-        web3 = new Web3(window.ethereum);
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-        alert("Wallet connected");
-        initContract();
-    } else {
-        alert("Please install MetaMask to interact with this application.");
-    }
-}
-
-//function initContract() {
-    const contractABI = [/*[
+const contractAddress = "0x9EED2f06b2a42bdecf43B4650Fc6C1CEf6a7a347";
+const contractABI = /* [
  {
   "inputs": [
    {
@@ -257,34 +243,49 @@ let contract;
     "indexed": false,
     "internalType": "uint256",
     "name": "_tokenId",
-    "type": "u*/];
-    const contractAddress = "/* 0x9EED2f06b2a42bdecf43B4650Fc6C1CEf6a7a347 */";
-    contract = new web3.eth.Contract(contractABI, contractAddress);
+    "type": "u */;
+
+let web3;
+let contract;
+
+async function connectWallet() {
+  if (window.ethereum) {
+    web3 = new Web3(window.ethereum);
+    try {
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      contract = new web3.eth.Contract(contractABI, contractAddress);
+      console.log("Wallet connected and contract initialized.");
+    } catch (error) {
+      console.error("Connection failed", error);
+    }
+  } else {
+    alert("MetaMask is not installed!");
+  }
 }
 
-//
-async function createNFT() {
-    const accounts = await web3.eth.getAccounts();
-    const tokenURI = document.getElementById("tokenURI").value;
-    try {
-        await contract.methods.createNFT(tokenURI).send({ from: accounts[0] });
-        alert("NFT created successfully!");
-    } catch (error) {
-        console.error(error);
-        alert("Error creating NFT");
-    }
+document.getElementById("connectWallet").onclick = connectWallet;
+
+async function mintNFT() {
+  const accounts = await web3.eth.getAccounts();
+  const account = accounts[0];
+  try {
+    const receipt = await contract.methods.mint().send({ from: account });
+    console.log("NFT minted:", receipt);
+  } catch (error) {
+    console.error("Minting failed", error);
+  }
 }
 
-//
-async function transferNFT() {
-    const accounts = await web3.eth.getAccounts();
-    const recipient = document.getElementById("recipientAddress").value;
-    const tokenId = document.getElementById("tokenId").value;
-    try {
-        await contract.methods.transferNFT(recipient, tokenId).send({ from: accounts[0] });
-        alert("NFT transferred successfully!");
-    } catch (error) {
-        console.error(error);
-        alert("Error transferring NFT");
-    }
+async function buyTokens() {
+  const accounts = await web3.eth.getAccounts();
+  const account = accounts[0];
+  try {
+    const receipt = await contract.methods.buyTokens().send({ from: account, value: web3.utils.toWei("0.01", "ether") });
+    console.log("Tokens purchased:", receipt);
+  } catch (error) {
+    console.error("Buying tokens failed", error);
+  }
 }
+
+document.getElementById("mintNFT").onclick = mintNFT;
+document.getElementById("buyTokens").onclick = buyTokens;
