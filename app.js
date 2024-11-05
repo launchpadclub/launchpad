@@ -1,3 +1,37 @@
+const spaceship = document.getElementById('spaceship');
+
+// تحريك السفينة بناءً على حركة الماوس
+document.addEventListener('mousemove', (event) => {
+    anime({
+        targets: spaceship,
+        translateX: event.pageX - 30,
+        translateY: event.pageY - 30,
+        easing: 'easeOutExpo',
+        duration: 300
+    });
+});
+
+// التفاعل عند الدخول إلى الأقسام المختلفة
+const sections = document.querySelectorAll('.section');
+sections.forEach(section => {
+    section.addEventListener('mouseenter', () => {
+        anime({
+            targets: spaceship,
+            scale: 1.2,
+            easing: 'easeInOutQuad',
+            duration: 200
+        });
+    });
+
+    section.addEventListener('mouseleave', () => {
+        anime({
+            targets: spaceship,
+            scale: 1,
+            easing: 'easeInOutQuad',
+            duration: 200
+        });
+    });
+});
 const contractAddress = "0x9EED2f06b2a42bdecf43B4650Fc6C1CEf6a7a347";
 const contractABI = /* [
  {
