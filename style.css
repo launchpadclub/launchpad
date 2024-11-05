@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launchpad Platform</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Welcome to the Launchpad Platform</h1>
-    <button id="connectWallet">Connect Wallet</button>
-    <div id="nftContent"></div>
-    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
-    <script src="app.js"></script>
-</body>
-</html>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#connectWallet, #mintNFT, #buyTokens {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.nft-carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.moving-image {
+  width: 100px;
+  height: 100px;
+  animation: moveHorizontally 5s linear infinite;
+}
+
+@keyframes moveHorizontally {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
