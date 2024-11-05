@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Launchpad Platform</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launchpad Interactive UI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to the Launchpad Platform</h1>
-  <button id="connectWallet">Connect Wallet</button>
-  <div id="nftSection">
-    <h2>Top NFTs</h2>
-    <div class="nft-carousel">
-      <!--  <img src="images/nft1.png" alt="NFT 1">
-    <img src="images/nft2.png" alt="NFT 2">
-    <img src="images/nft3.png" alt="NFT 3"> -->
-      <img src="monkey.png" class="moving-image" alt="NFT Image">
-    </div>
-  </div>
-  <button id="mintNFT">Mint NFT</button>
-  <button id="buyTokens">Buy Tokens</button>
+    <!-- واجهة السفينة الفضائية -->
+    <div class="spaceship" id="spaceship"></div>
 
-  <script src="web3.min.js"></script>
-  <script src="app.js"></script>
+    <!-- الأقسام المتعددة التي يمكن التنقل بينها -->
+    <div class="sections">
+        <section class="section" id="welcome">
+            <h1>Welcome to Launchpad</h1>
+            <p>Explore the digital universe with your spaceship. Use it to navigate through smart contracts, NFTs, and more.</p>
+        </section>
+        <section class="section" id="contracts">
+            <h1>Smart Contracts</h1>
+            <p>Create, access, and manage smart contracts securely on Ethereum, Solana, and other blockchains.</p>
+        </section>
+        <section class="section" id="nfts">
+            <h1>NFTs Marketplace</h1>
+            <p>Trade NFTs with seamless navigation through our space-themed interface.</p>
+        </section>
+        <section class="section" id="trading">
+            <h1>Cryptocurrency Trading</h1>
+            <p>Engage in cryptocurrency trading with a secure and intuitive interface.</p>
+        </section>
+    </div>
+
+    <!-- تعليمات الاستخدام -->
+    <footer class="instructions">
+        <p>Use the spaceship to navigate. Hover over sections to explore each area in detail.</p>
+    </footer>
+
+    <!-- ملفات الجافا سكريبت -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
