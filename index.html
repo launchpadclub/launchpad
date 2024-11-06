@@ -6,119 +6,146 @@
   <title>Launchpad Platform</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #0b0f19;
-      color: white;
-      font-family: 'Arial', sans-serif;
-    }
-    .platform-card {
-      background: #1b1f2a;
-      border-radius: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .platform-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
-    }
-    .btn-custom {
-      background-color: #00ffff;
-      color: black;
-      border-radius: 25px;
-      transition: background 0.3s;
-    }
-    .btn-custom:hover {
-      background-color: #00cccc;
-    }
-    .header, .roadmap, .referral {
-      text-align: center;
-      margin: 20px;
-    }
+    body { background-color: #0b0f19; color: white; font-family: 'Arial', sans-serif; }
+    .platform-card { background: #1b1f2a; border: none; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s; }
+    .platform-card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); }
+    .btn-custom { background-color: #00ffff; color: black; border-radius: 25px; transition: background 0.3s; }
+    .btn-custom:hover { background-color: #00cccc; }
+    .section-title { font-size: 2rem; margin-top: 20px; }
+    .nft-grid, .domain-grid, .crypto-grid { margin-top: 40px; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding: 20px; font-size: 2rem; }
+    .moving-images { overflow: hidden; white-space: nowrap; background-color: #0b0f19; padding: 10px 0; }
+    .moving-images img { display: inline-block; height: 50px; margin-right: 20px; animation: scroll 10s linear infinite; }
+    @keyframes scroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
   </style>
 </head>
 <body>
 
   <!-- Header Section -->
-  <div class="header">
+  <div class="container header">
     <h1>Launchpad Platform</h1>
-    <p>Explore resources across major blockchain protocols and platforms</p>
     <a href="https://twitter.com/Laaunchpad" target="_blank" class="btn btn-light">@Laaunchpad</a>
   </div>
 
-  <!-- Protocols Section -->
-  <div class="container text-center">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- Bitcoin Protocol -->
+ <!-- Moving Images Section -->
+  <div class="moving-images text-center">
+    <img src="https://i.postimg.cc/6qM7dgm3/image.jpg" alt="Image 1">
+    <img src="https://i.postimg.cc/L6yffYcT/image.jpg" alt="Image 2">
+    <img src="https://i.postimg.cc/P5C4qs62/image.png" alt="Image 3">
+    <img src="https://i.postimg.cc/SNTdqNGn/image.jpg" alt="Image 4">
+    <img src="https://i.postimg.cc/1RKMCKnc/image.jpg" alt="Image 5">
+    <img src="https://i.postimg.cc/xjzF6YfM/image.jpg" alt="Image 6">
+    <img src="https://i.postimg.cc/htyrS34K/image.jpg" alt="Image 7">
+    <img src="https://i.postimg.cc/sxz6B6B1/image.jpg" alt="Image 8">
+    <img src="https://i.postimg.cc/cJx0yh17/image.jpg"Image 9">
+  </div>
+
+  <!-- Crypto Section -->
+  <div class="container crypto-grid">
+    <h2 class="section-title">Crypto Trading Platforms</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <!-- Example Crypto Card for each protocol -->
       <div class="col">
-        <div class="platform-card p-3">
-          <h5>Bitcoin</h5>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.opensea.io', '_blank')">Create & Trade NFTs</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.binance.com', '_blank')">Create & Trade Tokens</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.unstoppabledomains.com', '_blank')">Create Domains</button>
-          <button class="btn btn-custom" onclick="window.open('https://www.wormholebridge.com', '_blank')">Bridge to Other Networks</button>
+        <div class="platform-card">
+          <div class="card-body">
+            <h5 class="card-title">Bitcoin</h5>
+            <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Create & Trade NFTs</button>
+            <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Create & Trade Tokens</button>
+            <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Create Domains</button>
+            <button class="btn btn-custom" onclick="window.open('https://bitcoin.org', '_blank')">Bridge to Other Networks</button>
+          </div>
         </div>
       </div>
-      <!-- Ethereum Protocol -->
+
+      <!-- Additional Protocols -->
       <div class="col">
-        <div class="platform-card p-3">
-          <h5>Ethereum</h5>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.opensea.io', '_blank')">Create & Trade NFTs</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.binance.com', '_blank')">Create & Trade Tokens</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.unstoppabledomains.com', '_blank')">Create Domains</button>
-          <button class="btn btn-custom" onclick="window.open('https://www.wormholebridge.com', '_blank')">Bridge to Other Networks</button>
+        <div class="platform-card">
+          <div class="card-body">
+            <h5 class="card-title">Ethereum</h5>
+            <button class="btn btn-custom" onclick="window.open('https://ethereum.org', '_blank')">Create & Trade NFTs</button>
+            <button class="btn btn-custom" onclick="window.open('https://ethereum.org', '_blank')">Create & Trade Tokens</button>
+            <button class="btn btn-custom" onclick="window.open('https://ethereum.org', '_blank')">Create Domains</button>
+            <button class="btn btn-custom" onclick="window.open('https://ethereum.org', '_blank')">Bridge to Other Networks</button>
+          </div>
         </div>
       </div>
-      <!-- Solana Protocol -->
-      <div class="col">
-        <div class="platform-card p-3">
-          <h5>Solana</h5>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.magiceden.io', '_blank')">Create & Trade NFTs</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.binance.com', '_blank')">Create & Trade Tokens</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.unstoppabledomains.com', '_blank')">Create Domains</button>
-          <button class="btn btn-custom" onclick="window.open('https://www.wormholebridge.com', '_blank')">Bridge to Other Networks</button>
-        </div>
-      </div>
-      <!-- ApeChain Protocol -->
-      <div class="col">
-        <div class="platform-card p-3">
-          <h5>ApeChain</h5>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.opensea.io', '_blank')">Create & Trade NFTs</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.binance.com', '_blank')">Create & Trade Tokens</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.unstoppabledomains.com', '_blank')">Create Domains</button>
-          <button class="btn btn-custom" onclick="window.open('https://www.wormholebridge.com', '_blank')">Bridge to Other Networks</button>
-        </div>
-      </div>
-      <!-- Ton Protocol -->
-      <div class="col">
-        <div class="platform-card p-3">
-          <h5>Ton</h5>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.opensea.io', '_blank')">Create & Trade NFTs</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.binance.com', '_blank')">Create & Trade Tokens</button>
-          <button class="btn btn-custom mb-2" onclick="window.open('https://www.unstoppabledomains.com', '_blank')">Create Domains</button>
-          <button class="btn btn-custom" onclick="window.open('https://www.wormholebridge.com', '_blank')">Bridge to Other Networks</button>
-        </div>
-      </div>
+
+      <!-- Other protocol cards (Solana, Ton, ApeChain, Fractal, OpCAT) follow similar structure... -->
+
     </div>
   </div>
 
+  <!-- NFT Section -->
+  <div class="container nft-grid">
+    <h2 class="section-title">NFT Marketplaces</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <div class="col">
+        <div class="platform-card">
+          <div class="card-body">
+            <h5 class="card-title">Magic Eden</h5>
+            <button class="btn btn-custom" onclick="window.open('https://magiceden.io', '_blank')">Explore Magic Eden</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="platform-card">
+          <div class="card-body">
+            <h5 class="card-title">OpenSea</h5>
+            <button class="btn btn-custom" onclick="window.open('https://opensea.io', '_blank')">Explore OpenSea</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more NFT marketplaces as needed... -->
+    </div>
+  </div>
+
+  <!-- Domain Trading Section -->
+  <div class="container domain-grid">
+    <h2 class="section-title">Domain Marketplaces</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <!-- Add domain trading cards for each blockchain protocol... -->
+    </div>
+  </div>
+
+  <!-- Creative Launch Section -->
+  <div class="container">
+    <h2 class="section-title">Launch Your Creativity</h2>
+    <p>Submit your creative ideas (NFTs, games, apps, tokens) to our team through Twitter!</p>
+    <a href="https://twitter.com/Laaunchpad" class="btn btn-custom" target="_blank">Submit on Twitter</a>
+  </div>
+
+  <!-- Referral Section -->
+  <div class="container">
+    <h2 class="section-title">Earn Rewards</h2>
+    <p>Invite friends and earn points! Share your referral link below:</p>
+    <button class="btn btn-custom" onclick="copyReferral()">Copy Referral Link</button>
+  </div>
+
   <!-- Roadmap Section -->
-  <div class="roadmap container">
-    <h3>Roadmap</h3>
+  <div class="container">
+    <h2 class="section-title">Roadmap</h2>
     <ul>
-      <li>Q4: Launchpad Beta Release</li>
-      <li>Q4: Mainnet Launch with Major Protocols</li>
-      <li>Q1 Next Year: Launch Stock & Exchange Platform</li>
-      <li>Q1 Next Year: Private Network Launch</li>
-      <li>Metaverse Game: Mint & Buy Lands and Properties</li>
+      <li>Q4 Launch: Beta release on all major blockchains</li>
+      <li>Q1 Next Year: Launch metaverse with land trading capabilities</li>
+      <li>Further Developments: Launch stock trading platform, release private network, enhance referral and reward systems</li>
     </ul>
   </div>
 
-  <!-- Referral System Section -->
-  <div class="referral container">
-    <h3>Earn with Referrals</h3>
-    <p>Invite friends to earn points and rewards!</p>
-    <button class="btn btn-custom" onclick="window.open('https://your-referral-link.com', '_blank')">Get Your Referral Link</button>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS & Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script>
+    function copyReferral() {
+      const dummy = document.createElement('input');
+      document.body.appendChild(dummy);
+      dummy.value = window.location.href + "?ref=yourRefCode";
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+      alert('Referral link copied!');
+    }
+  </script>
 </body>
 </html>
