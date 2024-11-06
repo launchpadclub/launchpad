@@ -14,7 +14,7 @@
       color: white;
       font-family: 'Arial', sans-serif;
     }
-    .platform-card, .roadmap, .objectives, .referral {
+    .header, .protocol-section, .roadmap, .creatives-section, .share-section {
       background-color: #1b1f2a;
       border-radius: 15px;
       padding: 20px;
@@ -43,101 +43,90 @@
       border: none;
       margin-top: 20px;
     }
+    .protocol-img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
   </style>
 </head>
 <body>
 
   <!-- Header Section -->
-  <div class="container header">
+  <div class="container header text-center">
     <h1>Launchpad Platform</h1>
     <a href="https://twitter.com/Laaunchpad" target="_blank" class="btn btn-light">@Laaunchpad</a>
   </div>
 
-  <!-- Platforms and Protocols Section -->
-  <div class="container my-5">
+  <!-- Protocols Section -->
+  <div class="container protocol-section">
+    <h2 class="text-center mb-4">Explore Resources Across Protocols</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
 
-      <!-- Magic Eden -->
+      <!-- Bitcoin Protocol -->
       <div class="col">
-        <div class="platform-card">
-          <h5>Magic Eden</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://magiceden.io')">NFT Marketplace</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://magiceden.io/domains')">Domain Trading</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://magiceden.io/bridge')">Bridge to Other Networks</button>
+        <div class="protocol-card">
+          <img src="https://example.com/bitcoin-animated.gif" alt="Bitcoin" class="protocol-img">
+          <h5>Bitcoin</h5>
+          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-nft-platform.com')">Create & Trade NFTs</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-crypto-platform.com')">Create & Trade Tokens</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-domains.com')">Create & Trade Domains</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-bridge.com')">Bridge to Other Networks</button>
         </div>
       </div>
 
-      <!-- OpenSea -->
+      <!-- Ethereum Protocol -->
       <div class="col">
-        <div class="platform-card">
-          <h5>OpenSea</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://opensea.io')">NFT Trading</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://opensea.io/domains')">Domain Minting</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://opensea.io/bridge')">Cross-Network Bridge</button>
+        <div class="protocol-card">
+          <img src="https://example.com/ethereum-animated.gif" alt="Ethereum" class="protocol-img">
+          <h5>Ethereum</h5>
+          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-nft-platform.com')">Create & Trade NFTs</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-crypto-platform.com')">Create & Trade Tokens</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-domains.com')">Create & Trade Domains</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-bridge.com')">Bridge to Other Networks</button>
         </div>
       </div>
 
       <!-- Solana Protocol -->
       <div class="col">
-        <div class="platform-card">
-          <h5>Solana Protocol</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana.com/nft')">NFT Creation</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana.com/domains')">Domain Registration</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana.com/bridge')">Solana Bridge</button>
+        <div class="protocol-card">
+          <img src="https://example.com/solana-animated.gif" alt="Solana" class="protocol-img">
+          <h5>Solana</h5>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana-nft-platform.com')">Create & Trade NFTs</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana-crypto-platform.com')">Create & Trade Tokens</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana-domains.com')">Create & Trade Domains</button>
+          <button class="btn btn-custom" onclick="openInIframe('https://solana-bridge.com')">Bridge to Other Networks</button>
         </div>
       </div>
 
-      <!-- Additional Protocols as needed... -->
+      <!-- Add other protocols (Farcetal, Ton, Ape) following the same structure -->
 
     </div>
   </div>
 
-  <!-- NFT Trading Section -->
-  <div class="container my-5 text-center">
-    <h2>NFT Trading Across Protocols</h2>
-    <p>Trade NFTs across the most popular protocols with ease and security.</p>
-  </div>
-
-  <!-- Currency Trading Section -->
-  <div class="container my-5 text-center">
-    <h2>Cryptocurrency Trading Across Protocols</h2>
-    <p>Experience secure and seamless cryptocurrency trading across supported protocols.</p>
-  </div>
-
-  <!-- Domain Minting Section -->
-  <div class="container my-5 text-center">
-    <h2>Domain Minting and Trading</h2>
-    <p>Mint and trade custom domains associated with each protocol.</p>
-  </div>
-
-  <!-- Cross-Network Bridge Section -->
-  <div class="container my-5 text-center">
-    <h2>Cross-Network Bridges</h2>
-    <p>Use bridges to transfer assets between networks seamlessly.</p>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="container text-center">
-    <h3>Launch Your Project with Us</h3>
-    <p>For inquiries regarding listing NFTs, meme coins, or crypto gaming projects, contact us on <a href="https://twitter.com/Laaunchpad" target="_blank">@Laaunchpad</a>.</p>
-  </div>
-
   <!-- Roadmap Section -->
-  <div class="container roadmap">
+  <div class="container roadmap text-center">
     <h3>Strategic Roadmap</h3>
-    <ul>
-      <li><strong>Q4 This Year:</strong> Launch beta version, integrate metaverse gaming with asset minting.</li>
-      <li><strong>Q1 Next Year:</strong> Initiate stock and trading exchange, deploy private blockchain infrastructure.</li>
-      <li><strong>Q2 Next Year:</strong> Expand services and partnerships to include exclusive NFTs.</li>
+    <p>Our journey is to bring cutting-edge tools for creators and traders in the blockchain space.</p>
+    <ul class="text-start">
+      <li><strong>Q4 This Year:</strong> Launch beta version with full NFT and token support across protocols.</li>
+      <li><strong>Q1 Next Year:</strong> Introduce new features for decentralized applications and gaming assets.</li>
+      <li><strong>Q2 Next Year:</strong> Expand partnerships and exclusive project launches on our platform.</li>
     </ul>
   </div>
 
-  <!-- Referral Section -->
-  <div class="container referral text-center">
-    <h3>Referral Program</h3>
-    <p>Invite friends to our platform and earn 3 points for every valid referral. Future mystery rewards await!</p>
-    <button class="btn btn-custom" onclick="generateReferralLink()">Generate Referral Link</button>
-    <p id="referralLink"></p>
+  <!-- Creatives Section -->
+  <div class="container creatives-section text-center">
+    <h3>Launch Your Project with Us</h3>
+    <p>Are you an NFT artist, meme creator, or crypto game developer? Showcase your work on Launchpad by contacting us on <a href="https://twitter.com/Laaunchpad" target="_blank">@Laaunchpad</a>.</p>
+  </div>
+
+  <!-- Social Share Section -->
+  <div class="container share-section text-center">
+    <h3>Share Our Platform</h3>
+    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on Twitter</button>
+    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on Facebook</button>
+    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on WhatsApp</button>
   </div>
 
   <!-- Iframe Section for Opening Links -->
@@ -154,11 +143,22 @@
       document.getElementById('contentFrame').src = url;
     }
 
-    // Function to generate a unique referral link
-    function generateReferralLink() {
-      const referralCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-      const referralUrl = `https://yourplatform.com/referral?code=${referralCode}`;
-      document.getElementById('referralLink').textContent = referralUrl;
+    // Function to share platform link on social media
+    function shareOnSocial(url) {
+      const text = encodeURIComponent("Check out this amazing platform for creating and trading NFTs, tokens, and more!");
+      const encodedUrl = encodeURIComponent(url);
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${encodedUrl}`;
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${text} ${encodedUrl}`;
+
+      // Opens the sharing link based on the button clicked
+      if (url.includes("twitter")) {
+        window.open(twitterUrl, "_blank");
+      } else if (url.includes("facebook")) {
+        window.open(facebookUrl, "_blank");
+      } else if (url.includes("whatsapp")) {
+        window.open(whatsappUrl, "_blank");
+      }
     }
   </script>
 
