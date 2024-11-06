@@ -1,48 +1,83 @@
-/* إعدادات الصفحة */
+/* خلفية الصفحة ونصوصها */
 body {
-    margin: 0;
-    overflow: hidden;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-    font-family: Arial, sans-serif;
-    color: #c5c6c7;
+  background-color: #0b0f19;
+  color: white;
+  font-family: 'Arial', sans-serif;
 }
 
-.spaceship {
-    width: 60px;
-    height: 60px;
-    background-image: url('spaceship.png'); /*<a href='https://postimg.cc/CdGN79hJ' target='_blank'><img src='https://i.postimg.cc/FFqBrQ2t/IMG-Launchpad.jpg' border='0' alt='IMG-Launchpad'/></a> */
-    background-size: cover;
-    position: absolute;
-    transition: transform 0.1s ease;
-    pointer-events: none;
+/* بطاقة كل بروتوكول */
+.platform-card {
+  background: #1b1f2a;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
 }
 
-.section {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #66fcf1;
-    text-align: center;
+.platform-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
 }
 
-.section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/* أزرار مخصصة */
+.btn-custom {
+  background-color: #00ffff;
+  color: black;
+  border-radius: 25px;
+  transition: background 0.3s;
+  margin: 5px 0;
 }
 
-.section p {
-    font-size: 1.2rem;
-    width: 60%;
+.btn-custom:hover {
+  background-color: #00cccc;
 }
 
-.instructions {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: #45a29e;
-    font-size: 1rem;
+/* عنوان الأقسام */
+.section-title {
+  font-size: 2rem;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* الشبكات (النمط الخاص بكل قسم) */
+.nft-grid, .domain-grid, .crypto-grid {
+  margin-top: 40px;
+}
+
+/* ترويسة */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+/* فقرة التعريف */
+.intro {
+  margin: 40px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #bbb;
+}
+
+/* قسم الصور المتحركة */
+.moving-images {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #0b0f19;
+  padding: 10px 0;
+}
+
+.moving-images img {
+  display: inline-block;
+  height: 50px;
+  margin-right: 20px;
+  animation: scroll 10s linear infinite;
+}
+
+/* حركة التمرير للصور المتحركة */
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
