@@ -1,166 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Launchpad Platform</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body {
-      background-color: #0b0f19;
-      color: white;
-      font-family: 'Arial', sans-serif;
-    }
-    .header, .protocol-section, .roadmap, .creatives-section, .share-section {
-      background-color: #1b1f2a;
-      border-radius: 15px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    .btn-custom {
-      background-color: #00ffff;
-      color: black;
-      border-radius: 25px;
-      margin: 5px;
-      transition: background 0.3s;
-    }
-    .btn-custom:hover {
-      background-color: #00cccc;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      font-size: 2rem;
-    }
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      margin-top: 20px;
-    }
-    .protocol-img {
-      width: 100%;
-      height: auto;
-      max-height: 200px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launchpad Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1f27;
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .protocol-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .protocol {
+            background-color: #2a2d3e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .protocol h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: block;
+            background-color: #00b0ff;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0090e3;
+        }
+        .roadmap {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <div class="container header text-center">
+<header>
     <h1>Launchpad Platform</h1>
-    <a href="https://twitter.com/Laaunchpad" target="_blank" class="btn btn-light">@Laaunchpad</a>
-  </div>
+    <p>Explore Resources Across Protocols</p>
+</header>
 
-  <!-- Protocols Section -->
-  <div class="container protocol-section">
-    <h2 class="text-center mb-4">Explore Resources Across Protocols</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-
-      <!-- Bitcoin Protocol -->
-      <div class="col">
-        <div class="protocol-card">
-          <img src="https://example.com/bitcoin-animated.gif" alt="Bitcoin" class="protocol-img">
-          <h5>Bitcoin</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-nft-platform.com')">Create & Trade NFTs</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-crypto-platform.com')">Create & Trade Tokens</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-domains.com')">Create & Trade Domains</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://bitcoin-bridge.com')">Bridge to Other Networks</button>
-        </div>
-      </div>
-
-      <!-- Ethereum Protocol -->
-      <div class="col">
-        <div class="protocol-card">
-          <img src="https://example.com/ethereum-animated.gif" alt="Ethereum" class="protocol-img">
-          <h5>Ethereum</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-nft-platform.com')">Create & Trade NFTs</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-crypto-platform.com')">Create & Trade Tokens</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-domains.com')">Create & Trade Domains</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://ethereum-bridge.com')">Bridge to Other Networks</button>
-        </div>
-      </div>
-
-      <!-- Solana Protocol -->
-      <div class="col">
-        <div class="protocol-card">
-          <img src="https://example.com/solana-animated.gif" alt="Solana" class="protocol-img">
-          <h5>Solana</h5>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana-nft-platform.com')">Create & Trade NFTs</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana-crypto-platform.com')">Create & Trade Tokens</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana-domains.com')">Create & Trade Domains</button>
-          <button class="btn btn-custom" onclick="openInIframe('https://solana-bridge.com')">Bridge to Other Networks</button>
-        </div>
-      </div>
-
-      <!-- Add other protocols (Farcetal, Ton, Ape) following the same structure -->
-
+<section class="protocol-container">
+    <!-- Bitcoin Protocol -->
+    <div class="protocol">
+        <h2>Bitcoin</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
     </div>
-  </div>
 
-  <!-- Roadmap Section -->
-  <div class="container roadmap text-center">
-    <h3>Strategic Roadmap</h3>
-    <p>Our journey is to bring cutting-edge tools for creators and traders in the blockchain space.</p>
-    <ul class="text-start">
-      <li><strong>Q4 This Year:</strong> Launch beta version with full NFT and token support across protocols.</li>
-      <li><strong>Q1 Next Year:</strong> Introduce new features for decentralized applications and gaming assets.</li>
-      <li><strong>Q2 Next Year:</strong> Expand partnerships and exclusive project launches on our platform.</li>
-    </ul>
-  </div>
+    <!-- Fractal Protocol -->
+    <div class="protocol">
+        <h2>Fractal</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
+    </div>
 
-  <!-- Creatives Section -->
-  <div class="container creatives-section text-center">
-    <h3>Launch Your Project with Us</h3>
-    <p>Are you an NFT artist, meme creator, or crypto game developer? Showcase your work on Launchpad by contacting us on <a href="https://twitter.com/Laaunchpad" target="_blank">@Laaunchpad</a>.</p>
-  </div>
+    <!-- Ethereum Protocol -->
+    <div class="protocol">
+        <h2>Ethereum</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
+    </div>
 
-  <!-- Social Share Section -->
-  <div class="container share-section text-center">
-    <h3>Share Our Platform</h3>
-    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on Twitter</button>
-    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on Facebook</button>
-    <button class="btn btn-custom" onclick="shareOnSocial('https://yourplatform.com')">Share on WhatsApp</button>
-  </div>
+    <!-- Solana Protocol -->
+    <div class="protocol">
+        <h2>Solana</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
+    </div>
 
-  <!-- Iframe Section for Opening Links -->
-  <iframe id="contentFrame"></iframe>
+    <!-- Ton Protocol -->
+    <div class="protocol">
+        <h2>Ton</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
+    </div>
 
-  <!-- Bootstrap JS & Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <!-- Ape Protocol -->
+    <div class="protocol">
+        <h2>Ape</h2>
+        <a href="#" class="button">Create & Trade NFTs</a>
+        <a href="#" class="button">Create & Trade Tokens</a>
+        <a href="#" class="button">Create & Trade Domains</a>
+        <a href="#" class="button">Bridge to Other Networks</a>
+    </div>
+</section>
 
-  <!-- Custom JavaScript -->
-  <script>
-    // Function to open links in the iframe
-    function openInIframe(url) {
-      document.getElementById('contentFrame').src = url;
-    }
+<section class="roadmap">
+    <h2>Strategic Roadmap</h2>
+    <p>Our goal is to build a comprehensive platform that integrates resources across multiple protocols, making it easy to create, trade, and bridge assets.</p>
+    <p>Phase 1: Protocol Integration and Resource Development.</p>
+    <p>Phase 2: Expand with New Features and Cross-Chain Capabilities.</p>
+    <p>Phase 3: Partner with Content Creators and Enterprises.</p>
+</section>
 
-    // Function to share platform link on social media
-    function shareOnSocial(url) {
-      const text = encodeURIComponent("Check out this amazing platform for creating and trading NFTs, tokens, and more!");
-      const encodedUrl = encodeURIComponent(url);
-      const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${encodedUrl}`;
-      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${text} ${encodedUrl}`;
-
-      // Opens the sharing link based on the button clicked
-      if (url.includes("twitter")) {
-        window.open(twitterUrl, "_blank");
-      } else if (url.includes("facebook")) {
-        window.open(facebookUrl, "_blank");
-      } else if (url.includes("whatsapp")) {
-        window.open(whatsappUrl, "_blank");
-      }
-    }
-  </script>
+<section class="footer">
+    <p>Connect with us on Twitter to launch your project: <a href="https://twitter.com/Laaunchpad" target="_blank">@Laaunchpad</a></p>
+    <p>Share this platform:</p>
+    <a href="#" class="button">Share on Facebook</a>
+    <a href="#" class="button">Share on Twitter</a>
+    <a href="#" class="button">Share on LinkedIn</a>
+</section>
 
 </body>
 </html>
