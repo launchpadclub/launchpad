@@ -1,0 +1,36 @@
+{
+  "name": "launchpad-project",
+  "version": "1.0.0",
+  "description": "Launchpad platform for tokens and NFTs on Solana",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.79.0",
+    "@metaplex-foundation/js": "^1.3.0",
+    "@solana/spl-token": "^0.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+npm install @metaplex-foundation/js @solana/web3.js @solana/spl-token dotenv express body-parser
+
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+"homepage"https://launchpadclub.github.io/launchpad/>",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+ }
+}
